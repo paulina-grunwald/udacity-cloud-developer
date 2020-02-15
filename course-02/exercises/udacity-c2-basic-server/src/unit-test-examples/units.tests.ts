@@ -44,7 +44,14 @@ describe('concat', () => {
     expect(result).to.equal('onetwo')
 
   })
-
+  it('should throw error - firt var is not a string', () => {
+    expect(()=>{ concat('',"two") }).to.throw('a is not a string')
+  })
+  it('should throw error - firt var is not a string', () => {
+    expect(()=>{ concat('one',"") }).to.throw('b is not a string')
+  })
+  it('should throw error - firt var is not a string', () => {
+  })
 })
 
 

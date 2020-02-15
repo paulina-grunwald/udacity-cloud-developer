@@ -17,7 +17,9 @@ export const divide = (a: number, b: number) => {
 // ensure your function is exported.
 
 export const concat = (a: string, b: string) => {
-  if (a!=='' && b!=='') {
+  if(a === '' || typeof(a)!=='string') { throw new Error('a is not a string') }
+  if(b === '' || typeof(b)!=='string') { throw new Error('b is not a string') }
+
     return `${a}${b}`
-  }
+
 }
